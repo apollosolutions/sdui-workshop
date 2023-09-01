@@ -54,7 +54,7 @@ const TrackDetail = ({ track }) => {
               <div>{humanReadableTimeFromSeconds(length)}</div>
             </IconAndLabel>
           </DetailItem>
-          <DetailItem>
+          <DetailItem style={{paddingLeft: '50px'}}>
             <h4>Author</h4>
             <AuthorImage src={author.photo} />
             <AuthorName>{author.name}</AuthorName>
