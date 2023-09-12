@@ -24,6 +24,7 @@ const TrackDetail = ({ track }) => {
     description,
     thumbnail,
     author,
+    reviewScore,
     length,
     modulesCount,
     modules,
@@ -53,7 +54,7 @@ const TrackDetail = ({ track }) => {
               <div>{humanReadableTimeFromSeconds(length)}</div>
             </IconAndLabel>
           </DetailItem>
-          <DetailItem>
+          <DetailItem style={{paddingLeft: '50px'}}>
             <h4>Author</h4>
             <AuthorImage src={author.photo} />
             <AuthorName>{author.name}</AuthorName>
@@ -69,6 +70,12 @@ const TrackDetail = ({ track }) => {
               </Button>
             </StyledLink>
           </div>
+        </DetailRow>
+        <DetailRow>
+            <ReviewsContainer>
+              <h4>Reviews</h4>
+              <p>Average review score: {reviewScore}/10</p>
+            </ReviewsContainer>
         </DetailRow>
         <ModuleListContainer>
           <DetailItem>
@@ -99,6 +106,11 @@ const CoverImage = styled.img({
   maxHeight: 400,
   borderRadius: 4,
   marginBottom: 30,
+});
+
+const ReviewsContainer = styled.div({
+  width: '100%',
+  textAlign: 'center',
 });
 
 const StyledLink = styled(Link)({
