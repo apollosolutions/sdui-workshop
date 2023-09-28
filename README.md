@@ -8,7 +8,7 @@ This is the workshop repo for GraphQL Summit 2023 - [Server-Driven UI and GraphQ
 
 The lab outlines the requirements for this challenge. This codebase is the starting point of your journey!
 
-There are 3 main folders:
+There are 2 main folders:
 
 - `server`: The starting point of our GraphQL server.
 - `client`: The starting point of our React application.
