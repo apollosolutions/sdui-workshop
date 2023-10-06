@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import { humanReadableTimeFromSeconds } from './helpers.js';
 
 const resolvers = {
   Query: {
@@ -22,12 +23,21 @@ const resolvers = {
       return dataSources.trackAPI.getAuthor(authorId);
     },
 
+    duration: ({ length }) => {
+      return humanReadableTimeFromSeconds(length);
+    },
+
     modules: ({ id }, _, { dataSources }) => {
       return dataSources.trackAPI.getTrackModules(id);
     },
 
     reviewScore: () => faker.number.float({min: 1, max: 10, precision: 0.1})
-  }
+  },
+  Module: {
+    duration: ({ length }) => {
+      return humanReadableTimeFromSeconds(length);
+    },
+  },
 };
 
 export default resolvers;
