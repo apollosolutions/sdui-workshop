@@ -1,4 +1,4 @@
-const { faker } = require('@faker-js/faker');
+import { faker } from '@faker-js/faker';
 
 const resolvers = {
   Query: {
@@ -30,4 +30,4 @@ const resolvers = {
   }
 };
 
-module.exports = resolvers;
+export default resolvers;
