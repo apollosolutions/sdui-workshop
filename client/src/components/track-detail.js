@@ -8,7 +8,6 @@ import {
   IconTime,
   IconBook,
 } from '../styles';
-import { humanReadableTimeFromSeconds } from '../utils/helpers';
 import { Link } from 'react-router-dom';
 import ContentSection from './content-section';
 import MarkDown from './md-content';
@@ -25,7 +24,7 @@ const TrackDetail = ({ track }) => {
     thumbnail,
     author,
     reviewScore,
-    length,
+    duration,
     modulesCount,
     modules,
     numberOfViews,
@@ -51,7 +50,7 @@ const TrackDetail = ({ track }) => {
             </IconAndLabel>
             <IconAndLabel>
               <IconTime width="14px" />
-              <div>{humanReadableTimeFromSeconds(length)}</div>
+              <div>{duration}</div>
             </IconAndLabel>
           </DetailItem>
           <DetailItem style={{paddingLeft: '50px'}}>
@@ -85,7 +84,7 @@ const TrackDetail = ({ track }) => {
                 <li key={module.title}>
                   <div>{module.title}</div>
                   <ModuleLength>
-                    {humanReadableTimeFromSeconds(module.length)}
+                    {module.duration}
                   </ModuleLength>
                 </li>
               ))}

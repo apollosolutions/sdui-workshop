@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { colors, mq } from '../styles';
-import { humanReadableTimeFromSeconds } from '../utils/helpers';
 import { Link } from 'react-router-dom';
 
 /**
@@ -9,7 +8,7 @@ import { Link } from 'react-router-dom';
  * for each track populating the tracks grid homepage.
  */
 const TrackCard = ({ track }) => {
-  const { title, thumbnail, author, length, modulesCount, id } = track;
+  const { title, thumbnail, author, duration, modulesCount, id } = track;
 
   return (
     <CardContainer to={`/track/${id}`}>
@@ -24,7 +23,7 @@ const TrackCard = ({ track }) => {
             <AuthorAndTrack>
               <AuthorName>{author.name}</AuthorName>
               <TrackLength>
-                {modulesCount} modules - {humanReadableTimeFromSeconds(length)}
+                {modulesCount} modules - {duration}
               </TrackLength>
             </AuthorAndTrack>
           </CardFooter>
