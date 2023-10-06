@@ -17,6 +17,18 @@ const resolvers = {
     module: (_, { id }, { dataSources }) => {
       return dataSources.trackAPI.getModule(id);
     },
+
+    // get a track's details via SDUI
+    sduiTrackDetails: async (_, { id }, { dataSources }) => {
+      const track = await dataSources.trackAPI.getTrack(id);
+
+      return [
+        { __typename: "TrackTitle", track },
+        { __typename: "TrackInfo", track },
+        { __typename: "TrackReviews", track },
+        { __typename: "TrackModules", track },
+      ];
+    },
   },
   Track: {
     author: ({ authorId }, _, { dataSources }) => {
