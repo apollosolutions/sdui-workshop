@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "front-end demo app for Apollo's lift-off lab",
+  "type": "module",
   "dependencies": {
     "@apollo/client": "^3.7.16",
     "@apollo/space-kit": "^9.3.1",
