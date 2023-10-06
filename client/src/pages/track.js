@@ -17,13 +17,13 @@ export const GET_TRACK = gql`
       }
       reviewScore
       thumbnail
-      length
+      duration
       modulesCount
       numberOfViews
       modules {
         id
         title
-        length
+        duration
       }
       description
     }
