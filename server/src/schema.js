@@ -8,6 +8,31 @@ const typeDefs = gql`
     track(id: ID!): Track!
     "Fetch a specific module, provided a module's ID"
     module(id: ID!): Module!
+    "Fetch contents for a track via SDUI"
+    sduiTrackDetails(id: ID!): [TrackDetails]
+  }
+
+  "Union of track details"
+  union TrackDetails = TrackTitle | TrackInfo | TrackModules | TrackReviews
+
+  type TrackTitle {
+    track: Track!
+    module: Module!
+  }
+
+  type TrackInfo {
+    track: Track!
+    module: Module!
+  }
+
+  type TrackModules {
+    track: Track!
+    module: Module!
+  }
+
+  type TrackReviews {
+    track: Track!
+    module: Module!
   }
 
   "A track is a group of Modules that teaches about a specific topic"
