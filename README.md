@@ -4,6 +4,8 @@ This is the workshop repo for GraphQL Summit 2023 - [Server-Driven UI and GraphQ
 
 [Register now for GraphQL Summit 2023!](https://bit.ly/3XEzbUA)
 
+Check out the community [SDUI Specification](https://github.com/apollosolutions/sdui-specification)!
+
 ## How to use this repo
 
 The lab outlines the requirements for this challenge. This codebase is the starting point of your journey!
