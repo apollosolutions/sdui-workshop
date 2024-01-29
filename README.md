@@ -1,4 +1,4 @@
-# Odyssey Lift-off Lab - SDUI Edition!
+# Apollo SDUI Workshop
 
 This is the workshop repo for GraphQL Summit 2023 - [Server-Driven UI and GraphQL](https://summit.graphql.com/event/c51538f6-4b76-44e3-871e-54180c77cad8/websitePage:1e3136e7-807f-4b7d-a0e1-9adb59e9336e)
 
