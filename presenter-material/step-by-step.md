@@ -1,0 +1,31 @@
+- Schema Localization
+    - Deprecate the Length field in Module & Track
+        - @deprecated(reason: "Use duration instead")
+        - Create Duration field
+    - Move the helpers files to the server
+    - Create duration resolver for Module & Track
+        - Use helper within duration field
+    - Update queries to use duration
+        - `GET_MODULE_AND_PARENT_TRACK`
+        - `GET_TRACK`
+        - `TRACKS`
+    - Find all instances of "humanReadableTimeFromSeconds"
+        - Replace with use of duration field
+
+- Dynamic Content
+    - Component Registry
+        - Setup Registry Provider - index
+        - Setup initalRegistry
+    - Decompose Track Details - use git checkout
+        - `TrackTitle`
+        - `TrackInfo`
+        - `TrackModules`
+        - `TrackReviews`
+    - Update the Component Registry
+    - Replace TrackDetails contents with GQLComponent
+        - Create SDUI client query
+    - Create SDUI Schema
+        - Track Details Query
+        - Track Details Constrained Union
+    - Create SDUI Resolver
+    - Showcase the functionality, delete & reorder
